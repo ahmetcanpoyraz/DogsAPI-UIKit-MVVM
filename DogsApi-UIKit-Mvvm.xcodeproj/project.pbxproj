@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB2AAF0D2D116829007C3E03 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAEEB2D116829007C3E03 /* AppCoordinator.swift */; };
+		EB2AAF0E2D116829007C3E03 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAEEE2D116829007C3E03 /* APIClient.swift */; };
+		EB2AAF0F2D116829007C3E03 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAEEF2D116829007C3E03 /* APIEndpoints.swift */; };
+		EB2AAF102D116829007C3E03 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAEF02D116829007C3E03 /* APIError.swift */; };
+		EB2AAF112D116829007C3E03 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAEF22D116829007C3E03 /* RealmManager.swift */; };
+		EB2AAF122D116829007C3E03 /* DogsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAEF42D116829007C3E03 /* DogsService.swift */; };
+		EB2AAF132D116829007C3E03 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAEF62D116829007C3E03 /* Constants.swift */; };
+		EB2AAF142D116829007C3E03 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAEF72D116829007C3E03 /* ThemeManager.swift */; };
+		EB2AAF152D116829007C3E03 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAEFA2D116829007C3E03 /* String+Extensions.swift */; };
+		EB2AAF172D116829007C3E03 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAEFF2D116829007C3E03 /* CustomButton.swift */; };
+		EB2AAF182D116829007C3E03 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF012D116829007C3E03 /* DateHelper.swift */; };
+		EB2AAF192D116829007C3E03 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF042D116829007C3E03 /* LoginViewController.swift */; };
+		EB2AAF1A2D116829007C3E03 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF052D116829007C3E03 /* LoginViewModel.swift */; };
+		EB2AAF1B2D116829007C3E03 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF072D116829007C3E03 /* ProfileViewController.swift */; };
+		EB2AAF1C2D116829007C3E03 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF082D116829007C3E03 /* ProfileViewModel.swift */; };
+		EB2AAF1F2D11A61E007C3E03 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF1E2D11A61E007C3E03 /* CustomTextField.swift */; };
+		EB2AAF212D11A64F007C3E03 /* CustomErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF202D11A64F007C3E03 /* CustomErrorText.swift */; };
 		EBCCF9662D11672500D05128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCF9652D11672500D05128 /* AppDelegate.swift */; };
 		EBCCF9682D11672500D05128 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCF9672D11672500D05128 /* SceneDelegate.swift */; };
-		EBCCF96A2D11672500D05128 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCF9692D11672500D05128 /* ViewController.swift */; };
-		EBCCF96D2D11672500D05128 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EBCCF96C2D11672500D05128 /* Base */; };
 		EBCCF96F2D11672600D05128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBCCF96E2D11672600D05128 /* Assets.xcassets */; };
-		EBCCF9722D11672600D05128 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EBCCF9712D11672600D05128 /* Base */; };
 		EBCCF97D2D11672600D05128 /* DogsApi_UIKit_MvvmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCF97C2D11672600D05128 /* DogsApi_UIKit_MvvmTests.swift */; };
 		EBCCF9872D11672600D05128 /* DogsApi_UIKit_MvvmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCF9862D11672600D05128 /* DogsApi_UIKit_MvvmUITests.swift */; };
 		EBCCF9892D11672600D05128 /* DogsApi_UIKit_MvvmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCF9882D11672600D05128 /* DogsApi_UIKit_MvvmUITestsLaunchTests.swift */; };
@@ -36,13 +50,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB2AAEEB2D116829007C3E03 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		EB2AAEEE2D116829007C3E03 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		EB2AAEEF2D116829007C3E03 /* APIEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		EB2AAEF02D116829007C3E03 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		EB2AAEF22D116829007C3E03 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		EB2AAEF42D116829007C3E03 /* DogsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogsService.swift; sourceTree = "<group>"; };
+		EB2AAEF62D116829007C3E03 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EB2AAEF72D116829007C3E03 /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		EB2AAEFA2D116829007C3E03 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		EB2AAEFF2D116829007C3E03 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		EB2AAF012D116829007C3E03 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		EB2AAF042D116829007C3E03 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EB2AAF052D116829007C3E03 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EB2AAF072D116829007C3E03 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EB2AAF082D116829007C3E03 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		EB2AAF1E2D11A61E007C3E03 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		EB2AAF202D11A64F007C3E03 /* CustomErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorText.swift; sourceTree = "<group>"; };
 		EBCCF9622D11672500D05128 /* DogsApi-UIKit-Mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DogsApi-UIKit-Mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCCF9652D11672500D05128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBCCF9672D11672500D05128 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EBCCF9692D11672500D05128 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EBCCF96C2D11672500D05128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBCCF96E2D11672600D05128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EBCCF9712D11672600D05128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBCCF9732D11672600D05128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBCCF9782D11672600D05128 /* DogsApi-UIKit-MvvmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DogsApi-UIKit-MvvmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCCF97C2D11672600D05128 /* DogsApi_UIKit_MvvmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsApi_UIKit_MvvmTests.swift; sourceTree = "<group>"; };
@@ -76,6 +104,156 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB2AAEEC2D116829007C3E03 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAEEB2D116829007C3E03 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EB2AAEED2D116829007C3E03 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAEEC2D116829007C3E03 /* Coordinator */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EB2AAEF12D116829007C3E03 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAEEE2D116829007C3E03 /* APIClient.swift */,
+				EB2AAEEF2D116829007C3E03 /* APIEndpoints.swift */,
+				EB2AAEF02D116829007C3E03 /* APIError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EB2AAEF32D116829007C3E03 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAEF22D116829007C3E03 /* RealmManager.swift */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		EB2AAEF52D116829007C3E03 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAEF42D116829007C3E03 /* DogsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EB2AAEF82D116829007C3E03 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAEF62D116829007C3E03 /* Constants.swift */,
+				EB2AAEF72D116829007C3E03 /* ThemeManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EB2AAEF92D116829007C3E03 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAEED2D116829007C3E03 /* Base */,
+				EB2AAEF12D116829007C3E03 /* Network */,
+				EB2AAEF32D116829007C3E03 /* Persistance */,
+				EB2AAEF52D116829007C3E03 /* Services */,
+				EB2AAEF82D116829007C3E03 /* Utilities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EB2AAEFB2D116829007C3E03 /* Extansions */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAEFA2D116829007C3E03 /* String+Extensions.swift */,
+			);
+			path = Extansions;
+			sourceTree = "<group>";
+		};
+		EB2AAEFE2D116829007C3E03 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EBCCF96E2D11672600D05128 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EB2AAF002D116829007C3E03 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAEFF2D116829007C3E03 /* CustomButton.swift */,
+				EB2AAF1E2D11A61E007C3E03 /* CustomTextField.swift */,
+				EB2AAF202D11A64F007C3E03 /* CustomErrorText.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EB2AAF022D116829007C3E03 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAF012D116829007C3E03 /* DateHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EB2AAF032D116829007C3E03 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAF002D116829007C3E03 /* Components */,
+				EB2AAF022D116829007C3E03 /* Helpers */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		EB2AAF062D116829007C3E03 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAF042D116829007C3E03 /* LoginViewController.swift */,
+				EB2AAF052D116829007C3E03 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EB2AAF092D116829007C3E03 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAF072D116829007C3E03 /* ProfileViewController.swift */,
+				EB2AAF082D116829007C3E03 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		EB2AAF0B2D116829007C3E03 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		EB2AAF0C2D116829007C3E03 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAF062D116829007C3E03 /* Login */,
+				EB2AAF092D116829007C3E03 /* Profile */,
+				EB2AAF0B2D116829007C3E03 /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		EB2AAF1D2D11683B007C3E03 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EBCCF9652D11672500D05128 /* AppDelegate.swift */,
+				EBCCF9672D11672500D05128 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		EBCCF9592D11672500D05128 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +277,12 @@
 		EBCCF9642D11672500D05128 /* DogsApi-UIKit-Mvvm */ = {
 			isa = PBXGroup;
 			children = (
-				EBCCF9652D11672500D05128 /* AppDelegate.swift */,
-				EBCCF9672D11672500D05128 /* SceneDelegate.swift */,
-				EBCCF9692D11672500D05128 /* ViewController.swift */,
-				EBCCF96B2D11672500D05128 /* Main.storyboard */,
-				EBCCF96E2D11672600D05128 /* Assets.xcassets */,
-				EBCCF9702D11672600D05128 /* LaunchScreen.storyboard */,
+				EB2AAF1D2D11683B007C3E03 /* App */,
+				EB2AAEF92D116829007C3E03 /* Core */,
+				EB2AAEFB2D116829007C3E03 /* Extansions */,
+				EB2AAF0C2D116829007C3E03 /* Features */,
+				EB2AAEFE2D116829007C3E03 /* Resources */,
+				EB2AAF032D116829007C3E03 /* Shared */,
 				EBCCF9732D11672600D05128 /* Info.plist */,
 			);
 			path = "DogsApi-UIKit-Mvvm";
@@ -232,8 +410,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBCCF96F2D11672600D05128 /* Assets.xcassets in Resources */,
-				EBCCF9722D11672600D05128 /* Base in Resources */,
-				EBCCF96D2D11672500D05128 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +434,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBCCF96A2D11672500D05128 /* ViewController.swift in Sources */,
+				EB2AAF172D116829007C3E03 /* CustomButton.swift in Sources */,
+				EB2AAF0D2D116829007C3E03 /* AppCoordinator.swift in Sources */,
+				EB2AAF112D116829007C3E03 /* RealmManager.swift in Sources */,
+				EB2AAF192D116829007C3E03 /* LoginViewController.swift in Sources */,
+				EB2AAF1A2D116829007C3E03 /* LoginViewModel.swift in Sources */,
+				EB2AAF122D116829007C3E03 /* DogsService.swift in Sources */,
+				EB2AAF1B2D116829007C3E03 /* ProfileViewController.swift in Sources */,
+				EB2AAF182D116829007C3E03 /* DateHelper.swift in Sources */,
+				EB2AAF212D11A64F007C3E03 /* CustomErrorText.swift in Sources */,
+				EB2AAF1F2D11A61E007C3E03 /* CustomTextField.swift in Sources */,
+				EB2AAF152D116829007C3E03 /* String+Extensions.swift in Sources */,
 				EBCCF9662D11672500D05128 /* AppDelegate.swift in Sources */,
+				EB2AAF132D116829007C3E03 /* Constants.swift in Sources */,
+				EB2AAF1C2D116829007C3E03 /* ProfileViewModel.swift in Sources */,
+				EB2AAF0F2D116829007C3E03 /* APIEndpoints.swift in Sources */,
+				EB2AAF0E2D116829007C3E03 /* APIClient.swift in Sources */,
 				EBCCF9682D11672500D05128 /* SceneDelegate.swift in Sources */,
+				EB2AAF102D116829007C3E03 /* APIError.swift in Sources */,
+				EB2AAF142D116829007C3E03 /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +487,6 @@
 			targetProxy = EBCCF9832D11672600D05128 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		EBCCF96B2D11672500D05128 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EBCCF96C2D11672500D05128 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EBCCF9702D11672600D05128 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EBCCF9712D11672600D05128 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EBCCF98A2D11672600D05128 /* Debug */ = {
@@ -447,7 +620,6 @@
 				INFOPLIST_FILE = "DogsApi-UIKit-Mvvm/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,7 +647,6 @@
 				INFOPLIST_FILE = "DogsApi-UIKit-Mvvm/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
