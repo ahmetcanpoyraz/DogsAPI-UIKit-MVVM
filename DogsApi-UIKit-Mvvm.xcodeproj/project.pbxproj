@@ -24,6 +24,11 @@
 		EB2AAF1C2D116829007C3E03 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF082D116829007C3E03 /* ProfileViewModel.swift */; };
 		EB2AAF1F2D11A61E007C3E03 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF1E2D11A61E007C3E03 /* CustomTextField.swift */; };
 		EB2AAF212D11A64F007C3E03 /* CustomErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF202D11A64F007C3E03 /* CustomErrorText.swift */; };
+		EB2AAF242D12AF46007C3E03 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF232D12AF46007C3E03 /* MainTabBarController.swift */; };
+		EB2AAF272D12AF9E007C3E03 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF262D12AF9E007C3E03 /* HomeViewController.swift */; };
+		EB2AAF292D12AFA6007C3E03 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF282D12AFA6007C3E03 /* HomeViewModel.swift */; };
+		EB2AAF2B2D12AFB4007C3E03 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF2A2D12AFB4007C3E03 /* FavoritesViewController.swift */; };
+		EB2AAF2D2D12AFBE007C3E03 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2AAF2C2D12AFBE007C3E03 /* FavoritesViewModel.swift */; };
 		EBCCF9662D11672500D05128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCF9652D11672500D05128 /* AppDelegate.swift */; };
 		EBCCF9682D11672500D05128 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCF9672D11672500D05128 /* SceneDelegate.swift */; };
 		EBCCF96F2D11672600D05128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBCCF96E2D11672600D05128 /* Assets.xcassets */; };
@@ -67,6 +72,11 @@
 		EB2AAF082D116829007C3E03 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		EB2AAF1E2D11A61E007C3E03 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		EB2AAF202D11A64F007C3E03 /* CustomErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorText.swift; sourceTree = "<group>"; };
+		EB2AAF232D12AF46007C3E03 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		EB2AAF262D12AF9E007C3E03 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EB2AAF282D12AFA6007C3E03 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EB2AAF2A2D12AFB4007C3E03 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		EB2AAF2C2D12AFBE007C3E03 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		EBCCF9622D11672500D05128 /* DogsApi-UIKit-Mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DogsApi-UIKit-Mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCCF9652D11672500D05128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBCCF9672D11672500D05128 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,19 +238,23 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		EB2AAF0B2D116829007C3E03 /* Settings */ = {
+		EB2AAF0B2D116829007C3E03 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				EB2AAF2A2D12AFB4007C3E03 /* FavoritesViewController.swift */,
+				EB2AAF2C2D12AFBE007C3E03 /* FavoritesViewModel.swift */,
 			);
-			path = Settings;
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 		EB2AAF0C2D116829007C3E03 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EB2AAF252D12AF8A007C3E03 /* Home */,
+				EB2AAF222D12AF2B007C3E03 /* MainTabBar */,
 				EB2AAF062D116829007C3E03 /* Login */,
 				EB2AAF092D116829007C3E03 /* Profile */,
-				EB2AAF0B2D116829007C3E03 /* Settings */,
+				EB2AAF0B2D116829007C3E03 /* Favorites */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -252,6 +266,23 @@
 				EBCCF9672D11672500D05128 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		EB2AAF222D12AF2B007C3E03 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAF232D12AF46007C3E03 /* MainTabBarController.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		EB2AAF252D12AF8A007C3E03 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EB2AAF262D12AF9E007C3E03 /* HomeViewController.swift */,
+				EB2AAF282D12AFA6007C3E03 /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		EBCCF9592D11672500D05128 = {
@@ -435,9 +466,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB2AAF172D116829007C3E03 /* CustomButton.swift in Sources */,
+				EB2AAF292D12AFA6007C3E03 /* HomeViewModel.swift in Sources */,
 				EB2AAF0D2D116829007C3E03 /* AppCoordinator.swift in Sources */,
+				EB2AAF242D12AF46007C3E03 /* MainTabBarController.swift in Sources */,
 				EB2AAF112D116829007C3E03 /* RealmManager.swift in Sources */,
 				EB2AAF192D116829007C3E03 /* LoginViewController.swift in Sources */,
+				EB2AAF272D12AF9E007C3E03 /* HomeViewController.swift in Sources */,
 				EB2AAF1A2D116829007C3E03 /* LoginViewModel.swift in Sources */,
 				EB2AAF122D116829007C3E03 /* DogsService.swift in Sources */,
 				EB2AAF1B2D116829007C3E03 /* ProfileViewController.swift in Sources */,
@@ -449,8 +483,10 @@
 				EB2AAF132D116829007C3E03 /* Constants.swift in Sources */,
 				EB2AAF1C2D116829007C3E03 /* ProfileViewModel.swift in Sources */,
 				EB2AAF0F2D116829007C3E03 /* APIEndpoints.swift in Sources */,
+				EB2AAF2D2D12AFBE007C3E03 /* FavoritesViewModel.swift in Sources */,
 				EB2AAF0E2D116829007C3E03 /* APIClient.swift in Sources */,
 				EBCCF9682D11672500D05128 /* SceneDelegate.swift in Sources */,
+				EB2AAF2B2D12AFB4007C3E03 /* FavoritesViewController.swift in Sources */,
 				EB2AAF102D116829007C3E03 /* APIError.swift in Sources */,
 				EB2AAF142D116829007C3E03 /* ThemeManager.swift in Sources */,
 			);

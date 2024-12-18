@@ -18,7 +18,8 @@ class LoginViewModel {
         
         // Sabit giriş doğrulama
         if email == "Test@test.com" && password == "123456" {
-            AppCoordinator.shared.pushToPage("Profile")
+            UserDefaults.standard.set(true, forKey: "isLoggedIn")
+            AppCoordinator.shared.pushToPage(Constants.Pages.mainTabBar)
             stateChanged?(.success)
         } else {
             stateChanged?(.failure("Geçersiz kullanıcı adı veya şifre."))

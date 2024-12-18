@@ -11,8 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     private let viewModel = ProfileViewModel()
-
-    private let welcomeLabel = UILabel()
+    private let logOutButton = CustomButton(title: "Log Out")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +20,19 @@ class ProfileViewController: UIViewController {
 
     private func setupUI() {
         view.backgroundColor = .white
-        title = "Profile"
-
-        welcomeLabel.text = "Welcome"
-        welcomeLabel.textAlignment = .center
-        welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        view.addSubview(welcomeLabel)
+        view.addSubview(logOutButton)
+        
         NSLayoutConstraint.activate([
-            welcomeLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            welcomeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            welcomeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+            logOutButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            logOutButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            logOutButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
+        
+        logOutButton.addTarget(self, action: #selector(logOutButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func logOutButtonTapped() {
+        viewModel.logOut()
+        
     }
 }

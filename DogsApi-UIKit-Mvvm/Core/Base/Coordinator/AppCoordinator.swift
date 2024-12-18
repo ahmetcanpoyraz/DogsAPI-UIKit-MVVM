@@ -16,18 +16,25 @@ class AppCoordinator: Coordinator {
 
     func start() {
         // İlk sayfa yönlendirmesini yapıyoruz
-        pushToPage("Login")
+        let isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
+       
+        if isLoggedIn{
+            pushToPage(Constants.Pages.mainTabBar)
+        }else{
+            pushToPage(Constants.Pages.login)
+        }
+  
     }
 
     func pushToPage(_ page: String) {
         switch page {
-        case "Login":
+        case Constants.Pages.login:
             let loginViewController = LoginViewController()
-            navigationController.pushViewController(loginViewController, animated: true)
+            navigationController.setViewControllers([loginViewController], animated: true)
 
-        case "Profile":
-            let profileViewController = ProfileViewController()
-            navigationController.pushViewController(profileViewController, animated: true)
+        case Constants.Pages.mainTabBar:
+            let mainTabBarViewController = MainTabBarController()
+            navigationController.setViewControllers([mainTabBarViewController], animated: true)
 
         default:
             print("Bilinmeyen sayfa: \(page)")

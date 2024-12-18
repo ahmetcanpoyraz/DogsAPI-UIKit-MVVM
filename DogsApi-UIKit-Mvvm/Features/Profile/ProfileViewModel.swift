@@ -11,5 +11,10 @@ import Foundation
 class ProfileViewModel {
     
 
-
+    func logOut() {
+        UserDefaults.standard.set(false, forKey: "isLoggedIn")
+        AppCoordinator.shared.pushToPage(Constants.Pages.login)
+    }
+    
+    
 }

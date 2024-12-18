@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Constants {
+    struct Pages {
+        static let login = "Login"
+        static let mainTabBar = "MainTabBar"
+    }
+}
