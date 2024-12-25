@@ -1,37 +1,76 @@
-//
-//  HomeViewController.swift
-//  DogsApi-UIKit-Mvvm
-//
-//  Created by İzmir İnovasyon ve Teknoloji on 18.12.2024.
-//
-
-import Foundation
 import UIKit
 
 class HomeViewController: UIViewController {
-    
+    private let tableView = UITableView()
     private let viewModel = HomeViewModel()
-
-    private let welcomeLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        fetchData()
     }
-
+    
     private func setupUI() {
         view.backgroundColor = .white
-   
-
-        welcomeLabel.text = "home"
-        welcomeLabel.textAlignment = .center
-        welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        view.addSubview(welcomeLabel)
+        title = "Dogs List"
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.dataSource = self
+        tableView.delegate = self // Delegate eklemeyi unutmayın
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
+        
         NSLayoutConstraint.activate([
-            welcomeLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            welcomeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            welcomeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
+    }
+    
+    private func fetchData() {
+        Task {
+            do {
+                try await viewModel.fetchDogs()
+                reloadTableView()
+            } catch {
+                showErrorAlert(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func reloadTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    private func showErrorAlert(_ message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.dogs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let dog = viewModel.dogs[indexPath.row]
+        cell.textLabel?.text = dog.name
+        return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dog = viewModel.dogs[indexPath.row]
+        let detailVC = DogDetailViewController(dog: dog)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
